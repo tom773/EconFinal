@@ -33,12 +33,12 @@ desc <- imap_dfr(rets, function(r, nm) {
 f1 <- desc |>
     gt() |>
     tab_header(
-        title    = "Descriptive Statistics — Daily Log Returns",
+        title    = "Descriptive Statistics- Daily Log Returns",
         subtitle = "Coca-Cola (KO), NVIDIA (NVDA) & ExxonMobil (XOM), 2020–2024"
     ) |>
     fmt_number(columns = c(`Mean (%)`, `Std Dev (%)`, Skewness, `Excess Kurtosis`), decimals = 4) |>
     fmt_number(columns = c(`Annualised Vol (%)`, `Min (%)`, `Max (%)`), decimals = 2) |>
-    tab_source_note("Source: Yahoo Finance via quantmod. Author's calculations.") |>
+    tab_source_note("Source: Yahoo Finance via quantmod.") |>
     gt_theme_dr()
  
 gtsave(f1, "tables/desc_stats.png", zoom = 3, expand = 10)
@@ -66,7 +66,7 @@ xom_plot <- ggplot(xom_ret, aes(x = index(xom_ret), y = daily.returns)) +
  
 f2 <- ko_plot / nvda_plot / xom_plot +
     plot_annotation(
-        title    = "Daily Log Returns — KO, NVDA & XOM",
+        title    = "Daily Log Returns- KO, NVDA & XOM",
         subtitle = "2020–2024",
         theme    = theme_dark_roboto() # themes the title block + overall background
     )
@@ -92,7 +92,7 @@ f3 <- ggplot(growth_1, aes(x = Date, y = `Growth of $1`, color = Ticker)) +
     )) +
     scale_y_continuous(labels = scales::dollar_format(prefix = "$", accuracy = 0.01)) +
     labs(
-        title    = "Growth of $1 — KO, NVDA & XOM",
+        title    = "Growth of $1- KO, NVDA & XOM",
         subtitle = "Based on adjusted close daily log returns, 2020–2024",
         x        = "Date",
         y        = "Portfolio Value",

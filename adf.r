@@ -48,14 +48,14 @@ adf_tbl <- adf_tbl_df |>
     gt(rowname_col = "Ticker") |>
     tab_header(
         title    = "Augmented Dickey-Fuller Unit Root Tests",
-        subtitle = "Daily log returns — KO, NVDA & XOM, 2020–2024"
+        subtitle = "Daily log returns- KO, NVDA & XOM, 2020–2024"
     ) |>
     fmt_number(columns = `ADF statistic`, decimals = 3) |>
     fmt_integer(columns = `Lag order`) |>
     fmt_number(columns = `p-value`, decimals = 3) |>
     cols_align("center", columns = c(`ADF statistic`, `Lag order`, `p-value`)) |>
     tab_source_note(
-        "H\u2080: unit root (non-stationary). tseries reports a floor of 0.01 on the p-value. Source: Yahoo Finance via quantmod; author's calculations."
+        "H\u2080: unit root (non-stationary). tseries reports a floor of 0.01 on the p-value. Source: Yahoo Finance via quantmods."
     ) |>
     gt_theme_dr()
  

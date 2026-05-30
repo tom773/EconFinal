@@ -45,7 +45,7 @@ acf_xom  <- make_correlogram(xom_x,  "ExxonMobil (XOM)", "#5B9BD5", ylim = ylim_
  
 f_acf <- acf_ko / acf_nvda / acf_xom +
     plot_annotation(
-        title    = "Return Autocorrelation (Correlogram) — KO, NVDA & XOM",
+        title    = "Return Autocorrelation (Correlogram)- KO, NVDA & XOM",
         subtitle = "ACF of daily log returns with 95% white-noise bands, 2020–2024",
         theme    = theme_dark_roboto()
     )
@@ -59,7 +59,7 @@ pacf_xom  <- make_correlogram(xom_x,  "ExxonMobil (XOM)", "#5B9BD5", type = "par
                               show_x = TRUE)
 f_pacf <- pacf_ko / pacf_nvda / pacf_xom +
     plot_annotation(
-        title    = "Partial Autocorrelation (PACF) — KO, NVDA & XOM",
+        title    = "Partial Autocorrelation (PACF)- KO, NVDA & XOM",
         subtitle = "PACF of daily log returns, 2020–2024",
         theme    = theme_dark_roboto()
     )
@@ -96,7 +96,7 @@ lb_tbl <- lb_tbl_df |>
     tab_spanner(label = "Squared returns", columns = c(Q_sq, p_sq)) |>
     cols_align("center", columns = c(Q_ret, p_ret, Q_sq, p_sq)) |>
     tab_source_note(
-        "H\u2080: no autocorrelation up to lag 10. Source: Yahoo Finance via quantmod; author's calculations."
+        "H\u2080: no autocorrelation up to lag 10. Source: Yahoo Finance via quantmods."
     ) |>
     gt_theme_dr()
  

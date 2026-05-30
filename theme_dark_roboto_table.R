@@ -23,7 +23,7 @@ library(gt)
 .dr_tbl_pal <- list(
   accent = "#5B9BD5",   # steel blue, same accent[1] as the chart theme
 
-  # Light variant — matches the white-background gt tables in Assessment 1
+  # Light variant- matches the white-background gt tables in Assessment 1
   light = list(
     bg          = "#FFFFFF",
     text        = "#1A1D23",
@@ -33,7 +33,7 @@ library(gt)
     source      = "#7A7A7A"
   ),
 
-  # Dark variant — matches theme_dark_roboto() for a unified dark report
+  # Dark variant- matches theme_dark_roboto() for a unified dark report
   dark = list(
     bg          = "#21252E",
     text        = "#F2F2F2",
