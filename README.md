@@ -55,7 +55,8 @@ rrun_reccs(dat, A0_total = 2000000, p_var = 0.01,
           w_rec = c(KO = 0.40, NVDA = 0.20, XOM = 0.40))
 ```
 
-Changing the volatility model (Probs don't need to do this)
+#### Changing the volatility model (Probs don't need to do this)
+
 The GARCH specification lives in setup.R in a function called .garch_spec()
 it's an ARMA(0,0)-GARCH(1,1) with a Student-t distribution by default. This is what the assignment spec
 called for IIRC.
@@ -64,7 +65,7 @@ If you want to experiment with the distribution or the GARCH order, that's the o
 function to edit; both garch.r and reccs.r use it, so a change there flows
 through consistently.
 
-4. If something goes wrong
+## If something goes wrong
 
 ```could not find function "..."``` - the packages didn't load. Re-run
 source("main.r") (after setting the working directory), and make sure the
