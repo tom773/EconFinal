@@ -66,7 +66,7 @@ setup_roboto <- function() {
 #'
 #' @return A ggplot2 theme object.
 #' @export
-theme_dark_roboto <- function(base_size = 18,
+theme_dark_roboto <- function(base_size = 32,
                               grid      = "both",
                               border    = TRUE) {
   
@@ -102,27 +102,27 @@ theme_dark_roboto <- function(base_size = 18,
       axis.ticks.length = unit(4, "pt"),
       
       axis.text   = element_text(
-        family = "roboto", colour = p$text_body, size = rel(0.62)
+        family = "roboto", colour = p$text_body, size = rel(0.72)
       ),
       axis.title  = element_text(
-        family = "roboto", colour = p$text_body, size = rel(0.72),
+        family = "roboto", colour = p$text_body, size = rel(0.82),
         margin = margin(4, 4, 4, 4)
       ),
       
       # ── plot labels ─────────────────────────────────────────────────────────
       plot.title = element_text(
         family = "roboto_condensed", colour = p$text_title,
-        size   = rel(1.35),
+        size   = rel(1.45),
         margin = margin(b = 6)
       ),
       plot.subtitle = element_text(
         family = "roboto", colour = p$text_body,
-        size   = rel(0.95),
+        size   = rel(1.1),
         margin = margin(b = 12)
       ),
       plot.caption = element_text(
         family = "roboto", colour = p$text_light,
-        size   = rel(0.75), hjust = 1,
+        size   = rel(0.9), hjust = 1,
         margin = margin(t = 10)
       ),
       plot.title.position   = "plot",
@@ -133,21 +133,21 @@ theme_dark_roboto <- function(base_size = 18,
       legend.background = element_rect(fill = p$bg,    colour = NA),
       legend.key        = element_rect(fill = p$panel, colour = NA),
       legend.text  = element_text(
-        family = "roboto", colour = p$text_body, size = rel(0.83)
+        family = "roboto", colour = p$text_body, size = rel(0.93)
       ),
       legend.title = element_text(
-        family = "roboto", colour = p$text_body, size = rel(0.88),
+        family = "roboto", colour = p$text_body, size = rel(1.0),
         face   = "bold"
       ),
       legend.margin      = margin(6, 6, 6, 6),
-      legend.key.size    = unit(14, "pt"),
+      legend.key.size    = unit(18, "pt"),
       legend.position    = "right",
       
       # ── facet strips ────────────────────────────────────────────────────────
       strip.background = element_rect(fill = p$strip, colour = NA),
       strip.text = element_text(
         family = "roboto_condensed", colour = p$text_title,
-        size   = rel(0.88), face = "bold",
+        size   = rel(0.98), face = "bold",
         margin = margin(5, 8, 5, 8)
       )
     )

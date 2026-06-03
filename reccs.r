@@ -10,7 +10,7 @@
 run_reccs <- function(dat,
                       A0_total = 1500000,
                       p_var    = 0.05,
-                      w_rec    = c(KO = 0.05, NVDA = 0.65, XOM = 0.30)) {
+                      w_rec    = c(KO = 0.15, NVDA = 0.6, XOM = 0.25)) {
   if (is.null(dat$reg_df))
     stop("run_reccs() needs the risk-free rate from Fama-French factors; check ffm_path.")
 

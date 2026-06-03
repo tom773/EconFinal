@@ -225,7 +225,6 @@ run_var_granger <- function(dat, p = NULL, lag_max = 10) {
   ))
 }
 
-Pull actual 2025 daily log returns (own fetch; mirrors prepare_data()).
 .fetch_returns_2025 <- function(tickers, from = "2024-12-15", to = "2025-12-31") {
   rets <- map(set_names(tickers), function(tk) {
     px <- getSymbols(tk, auto.assign = FALSE, from = from, to = to)
@@ -241,7 +240,7 @@ Pull actual 2025 daily log returns (own fetch; mirrors prepare_data()).
 run_eval_2025 <- function(dat,
                           A0_total = 1500000,
                           p_var    = 0.05,
-                          w_rec    = c(KO = 0.05, NVDA = 0.65, XOM = 0.30),
+                          w_rec    = c(KO = 0.15, NVDA = 0.6, XOM = 0.25),
                           to_2025  = "2025-12-31") {
 
   dir.create("tables", showWarnings = FALSE)
